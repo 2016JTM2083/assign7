@@ -1,6 +1,8 @@
-###### this is the first .py file ###########import sys
-import sys
-import collections
+###### this is the first .py file ###########
+              
+import sys              			#Import sys to get command line arguements
+import collections      			#Import collections
+
 print sys.argv[1:]
 dict = {}
 for word in sys.argv[1:]:
@@ -11,12 +13,14 @@ for word in sys.argv[1:]:
 
 print dict
 
-# Function to find top 3 words
-def top3words(dict):
+	
+def top3words(dict):				# Function to find top 3 words
 	counts = collections.Counter(dict)
 	return [elem for elem, _ in counts.most_common(3)]
-#function calling
-top = top3words(dict)
+
+
+
+top = top3words(dict)				#function calling
 print top
 
-####### write your code here ##########
+
